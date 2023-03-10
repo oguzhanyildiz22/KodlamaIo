@@ -22,8 +22,8 @@ public class CourseManager {
 
 	public void add(Course course) throws Exception {
 
-		for (Course i : courses) {
-			if (i.getCourseName().equals(course.getCourseName())) {
+		for (Course existingCourse  : courses) {
+			if (existingCourse .getCourseName().equals(course.getCourseName())) {
 				throw new Exception("Ayni kurs adindan bulunmaktadir.");
 			}
 			

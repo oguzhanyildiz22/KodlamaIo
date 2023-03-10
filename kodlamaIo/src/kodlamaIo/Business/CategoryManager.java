@@ -21,9 +21,9 @@ public class CategoryManager {
 
 	public void add(Category category) throws Exception {
 
-		for (Category i : categories) {
+		for (Category existingCategory : categories) {
 
-			if (i.getCategoryName().equals(category.getCategoryName())) {
+			if (existingCategory.getCategoryName().equals(category.getCategoryName())) {
 				throw new Exception("Bu isim mevcuttur.");
 			}
 			
